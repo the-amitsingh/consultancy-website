@@ -61,7 +61,7 @@ section {
 .home {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("images/consult1.jpg") no-repeat;
+    url("images/consultant2.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -101,8 +101,8 @@ section {
 
 .header.active {
   background: var(--white);
-  padding: 3rem 9%;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem 9%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .header.active .logo,
@@ -131,7 +131,7 @@ section {
 .header .menu {
   font-size: 2rem;
   color: var(--white);
-  display: none;
+  /* display: none; */
 }
 /* header */
 
@@ -207,3 +207,102 @@ section {
     filter: invert(100%);
   }
   /* services */
+  /* works */
+.works .box-container .box .image {
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.works .box-container .box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.works .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 5rem;
+}
+
+.works .box-container .box .image .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+  font-size: 1.7rem;
+  padding: 1rem;
+  z-index: 90;
+  transform: translateY(100%);
+}
+
+.works .box-container .box:hover .image .content {
+  transform: translateY(0);
+}
+/* works */
+
+/* contact */
+.contact{
+  background: var(--light-bg);
+}
+.contact .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:3rem;
+
+}
+.contact .box-container .box{
+  width:30rem;
+
+}
+.contact .box-container .box h3{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.contact .box-container .box p{
+  font-size: 1.5rem;
+  color: var(--light-color);
+  margin-bottom: 2rem;
+}
+.contact .box-container form{
+  flex: 1 1 42rem;
+
+}
+.contact .box-container form .inputBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+   
+}
+.contact .box-container form  .inputBox input{
+  width:49%;
+}
+.contact .box-container form  .inputBox input,
+.contact .box-container form  textarea{
+  border-radius: 5rem;
+  padding: 1.2rem,1.8rem;
+  font-size: 1.5rem;
+  color: var(--black);
+  margin: 0.7rem 0 ;
+}
+.contact .box-container form textarea{
+  width: 100%;
+  border-radius: 1rem;
+  resize: none;
+  height: 20rem;
+}
+.contact .box-container form .btn{
+  color: var(--black);
+  background: var(--white);
+  border: 0.1rem solid var(--black);
+  margin-top: 1rem;
+
+}
+.contact .box-container form .btn:hover{
+  background:var(--black);
+  color: var(--white);
+}
